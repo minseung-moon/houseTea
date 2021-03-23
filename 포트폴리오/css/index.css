@@ -1,0 +1,280 @@
+@import url('https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,700&display=swap');
+
+.inner {
+    /* background-color: blue; */
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+a {
+    color : #000;
+    text-decoration: none;
+}
+body {
+    font-family: 'Playfair Display', serif;
+}
+
+header {
+    background-color: #fff;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    transform: translate(0, 40px);
+    transition: transform 1s;
+    z-index: 99;
+}
+header .inner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header .logo img{
+    width: 200px;    
+}
+header ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header ul li {
+    margin: 10px 20px;
+}
+header .main-menu li {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+header ul li::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width .3s;
+    margin-top: 10px;
+}
+
+header ul li:hover::after {
+    width: 100%;
+    
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+}
+main .banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #cfdac8;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+main .banner video {
+    position: absolute;
+    object-fit: cover;
+}
+main .banner .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #7c9473;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    animation: blind 2s 2.5s forwards;
+}
+main .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main .banner p {
+    font-size: 100px;
+    text-align: center;
+    color: white;
+    z-index: 2;
+    opacity: 0;
+    animation: opacity0to1 1.5s 1s forwards linear;
+}
+main .banner p:first-child {
+    margin-bottom: 50px;
+}
+
+main .about-tea {
+    height: 100vh;
+    background-color: #7c9473;
+    background-image: url('../media/teabg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+main .about-tea .inner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+main .about-tea .card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px #000;
+}
+main .about-tea a:first-child .card {
+    color: #7c9473;
+}
+main .about-tea a:nth-child(2) .card {
+    color: #cc7e00;
+}
+main .about-tea a:nth-child(3) .card {
+    color: #271310;
+}
+main .about-tea a:last-child .card {
+    color: #0b181e;
+}
+main .about-tea .card img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+}
+main .about-tea .card p {
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    transform: translateY(80px);
+    transition: 1s;
+}
+main .about-tea .card:hover p {
+    transform: translateY(0px);
+}
+main .about-tea .card:hover img {
+    transform: scale(1.2);
+}
+
+main .for-the-table {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../media/forthetable.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+main .for-the-table a {
+    position: absolute;
+    transition: .5s;
+}
+main .for-the-table a:hover {
+    transform: translateY(-20px);
+}
+main .for-the-table a img {
+    width: 400px;
+}
+main .for-the-table a:nth-of-type(1) {
+    bottom: 0px;
+    left: 100px;
+}
+main .for-the-table a:nth-of-type(2) {
+    bottom: 50px;
+    right: 100px;
+}
+main .for-the-table a:nth-of-type(3) {
+    top: 200px;
+    right: 100px;
+}
+main .for-the-table .mark {
+    font-size: 2rem;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #000;
+    position: absolute;
+    font-weight: 700;
+}
+main .for-the-table a:hover .mark{
+    transform: translateY(-20px);
+}
+main .for-the-table a:nth-of-type(1) .mark{
+    background-color: #ebefee;
+    bottom: 400px;
+    left: 100px;
+}
+main .for-the-table a:nth-of-type(2) .mark{
+    background-color: #cfc6bd;
+    bottom: 310px;
+    left: 200px;
+}
+main .for-the-table a:nth-of-type(3) .mark{
+    background-color: #d7a559;
+    bottom: 300px;
+    left: 40px;
+}
+
+main .brand-shop {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+main .brand-shop .brand {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    transition: 1s;
+}
+main .brand-shop .brand:nth-of-type(1) {
+    background-image: url('../media/twg.jpg');
+    clip-path: polygon(0 0, 34% 0, 34% 100%, 0% 100%);
+}
+main .brand-shop .brand:nth-of-type(2) {
+    background-image: url('../media/Fortnum\ &\ mason.jpg');
+    clip-path: polygon(34% 0, 67% 0, 67% 100%, 34% 100%);
+}
+main .brand-shop .brand:nth-of-type(3) {
+    background-image: url('../media/Mariage\ Freres.jpg');
+    clip-path: polygon(67% 0, 100% 0, 100% 100%, 67% 100%);
+}
+main .brand-shop .brand:hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    z-index: 99;
+}
+
+@keyframes blind {
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    } to {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+}
+
+@keyframes opacity0to1 {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
